@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Main
+    {
+        public static void main(String args[]){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter First Number:");
+            int num1 = sc.nextInt();
+            System.out.println("Enter Second Number:");
+            int num2 = sc.nextInt();
+            System.out.println("Enter Operator(+,-,*,/):");
+            char operator = sc.next().charAt(0);
+            int resultInt = 0;
+            double resultDouble = 0.0;
+            boolean isDouble = false;
+            switch(operator){
+                case'+':
+                    resultInt = num1 + num2;
+                    break;
+                    case'-':
+                        resultInt = num1 - num2;
+                        break;
+                        case'*':
+                            resultInt = num1 * num2;
+                            break;
+                            case'/':
+                            resultInt =  num1 / num2;
+                            isDouble = true;
+            
+            
+            break;
+            default:
+            System.out.println("Invalid operator ! Please use +, -, *, or /.");
+            sc.close();
+            return;
+        }
+        if(operator == '/') {
+            System.out.println("Result:"+resultDouble);
+        } else {
+            System.out.println("Result:"+resultInt);
+        }
+        sc.close();
+    }
+}
+        

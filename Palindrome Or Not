@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int b = sc.nextInt();
+      int r = 0;
+      int rem;
+      int num = b;
+      while(b > 0) {
+        rem = b % 10;
+        r = r * 10 + rem;
+        b /= 10;
+      }
+      System.out.println(r==num?"YES":"NO");
+      sc.close();
+  }
+}
